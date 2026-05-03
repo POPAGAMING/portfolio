@@ -1,0 +1,14 @@
+Robots.txt for Navadeep Portfolio
+
+Domain: https://navadeep.us
+
+==========================================
+
+Allow all web crawlers
+
+User-agent: *
+Allow: /
+
+Direct crawlers to the sitemap
+
+Sitemap: https://navadeep.us/sitemap.xml
