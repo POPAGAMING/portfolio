@@ -1,14 +1,8 @@
-Robots.txt for Navadeep Portfolio
-
-Domain: https://navadeep.us
-
-==========================================
-
-Allow all web crawlers
+# robots.txt for https://www.navadeep.us/
 
 User-agent: *
-Allow: /
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
 
-Direct crawlers to the sitemap
-
-Sitemap: https://navadeep.us/sitemap.xml
+Sitemap: https://www.navadeep.us/sitemap.xml
