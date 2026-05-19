@@ -585,17 +585,78 @@
 
         </main>
 
-        <!-- FOOTER -->
-        <footer class="border-t border-slate-200 dark:border-dark-border bg-white dark:bg-dark-bg mt-auto z-10 relative">
-            <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10 flex flex-col md:flex-row justify-between items-center gap-8">
-                <a href="#" class="flex items-center reveal-left">
-                    <img src="logo.png" alt="Navadeep Logo" draggable="false" class="h-10 object-contain hover:scale-105 transition-transform duration-700" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'"/>
-                </a>
-                <div class="flex gap-8 text-slate-500 dark:text-slate-400">
-                    <a href="#" class="reveal hover:text-pink-500 transition-colors duration-500 hover:scale-125 transform" style="transition-delay: 100ms;"><i data-lucide="mail" class="w-6 h-6"></i></a>
-                    <a href="#" class="reveal hover:text-purple-500 transition-colors duration-500 hover:scale-125 transform" style="transition-delay: 200ms;"><i data-lucide="github" class="w-6 h-6"></i></a>
-                    <a href="#" class="reveal hover:text-cyan-500 transition-colors duration-500 hover:scale-125 transform" style="transition-delay: 300ms;"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-                    <a href="#" class="reveal hover:text-rose-500 transition-colors duration-500 hover:scale-125 transform" style="transition-delay: 400ms;"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+        <!-- LARGE MULTI-COLUMN FOOTER -->
+        <footer class="border-t border-slate-200 dark:border-dark-border bg-slate-50 dark:bg-[#050508] mt-auto z-10 relative pt-16 pb-8">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-16">
+                    
+                    <!-- Col 1: Branding & Socials -->
+                    <div class="lg:col-span-2 flex flex-col gap-6">
+                        <a href="#" class="flex items-center reveal-left">
+                            <img src="logo.png" alt="Navadeep Logo" draggable="false" class="h-8 object-contain" onerror="this.src='https://via.placeholder.com/150x50?text=Logo'"/>
+                        </a>
+                        <div class="flex gap-4 text-slate-500 dark:text-slate-400">
+                            <a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300"><i data-lucide="message-square" class="w-5 h-5"></i></a>
+                            <a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                            <a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300"><i data-lucide="github" class="w-5 h-5"></i></a>
+                            <a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        </div>
+                        <div class="text-sm text-slate-500 dark:text-slate-400 mt-2 space-y-1">
+                            <p>Evozi Lanka is <span class="text-green-500 font-medium">open source</span>.</p>
+                            <p>&copy; 2026 Evozi Solutions, Inc.</p>
+                        </div>
+                    </div>
+
+                    <!-- Col 2: About -->
+                    <div>
+                        <h4 class="text-slate-900 dark:text-white font-semibold mb-4 text-sm">About</h4>
+                        <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">News</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Changelog</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Status</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Careers</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Rewards Program</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Products -->
+                    <div>
+                        <h4 class="text-slate-900 dark:text-white font-semibold mb-4 text-sm">Products</h4>
+                        <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Evozi+</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Evozi App</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Evozi Hosting</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 4: Resources -->
+                    <div>
+                        <h4 class="text-slate-900 dark:text-white font-semibold mb-4 text-sm">Resources</h4>
+                        <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Help Center</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Translate</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Report issues</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">API documentation</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 5: Legal -->
+                    <div>
+                        <h4 class="text-slate-900 dark:text-white font-semibold mb-4 text-sm">Legal</h4>
+                        <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Content Rules</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Terms of Use</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Security Notice</a></li>
+                            <li><a href="#" class="hover:text-slate-900 dark:hover:text-white transition-colors duration-300">Copyright Policy and DMCA</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Disclaimer -->
+                <div class="border-t border-slate-200 dark:border-[#1f222e] pt-8 text-[11px] text-slate-400 dark:text-slate-500 uppercase tracking-wide font-medium">
+                    NOT AN OFFICIAL FIVEM SERVICE. NOT APPROVED BY OR ASSOCIATED WITH ROCKSTAR GAMES OR TAKE-TWO INTERACTIVE.
                 </div>
             </div>
         </footer>
@@ -663,7 +724,6 @@
             { platform: 'Discord', purpose: 'Gaming, networking.', contact: 'xNavadeep', link: '#', icon: 'code', hoverColor: 'hover:text-indigo-500' }
         ];
 
-        // --- STREAMING_CHUNK:Defining Render Helpers & Observer ---
         // --- RENDER HELPERS ---
         function renderTimeline(data) {
             return data.map((item, idx) => `
@@ -700,7 +760,6 @@
             });
         }
 
-        // --- STREAMING_CHUNK:Executing DOM Injections ---
         // --- DOM MANIPULATION & LOGIC ---
         document.addEventListener('DOMContentLoaded', () => {
 
@@ -740,29 +799,19 @@
                 </div>
             `).join('');
 
-            // Render Gallery (NEW SECTION INJECTION)
+            // Render Gallery (NEW SORT DESIGN INJECTION)
             document.getElementById('gallery-container').innerHTML = GALLERY.map((item, idx) => `
-                <div class="group relative aspect-square p-2.5 rounded-[2rem] bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-[#1f222e] reveal transition-all duration-1000 hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_20px_40px_-15px_rgba(168,85,247,0.2)] hover:border-pink-500/30" style="transition-delay: ${(idx % 3) * 150}ms;">
+                <div class="group relative aspect-square rounded-[1.5rem] bg-slate-200 dark:bg-[#0a0a0a] overflow-hidden reveal transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl dark:hover:shadow-[0_20px_40px_-15px_rgba(168,85,247,0.2)]" style="transition-delay: ${(idx % 3) * 150}ms;">
+                    <!-- Color Tint Overlay on Hover -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 mix-blend-overlay pointer-events-none"></div>
                     
-                    <div class="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-slate-100 dark:bg-dark-surface">
-                        <!-- Color Tint Overlay on Hover -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 mix-blend-overlay"></div>
-                        
-                        <!-- Image -->
-                        <img src="${item.img}" alt="${item.alt}" draggable="false" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:-rotate-1" loading="lazy" />
-                        
-                        <!-- Visual overlay protecting the image but rendering text -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#050508]/90 via-[#050508]/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-5 sm:p-6 pointer-events-none z-20">
-                            <div class="transform translate-y-6 group-hover:translate-y-0 transition-transform duration-700">
-                                <span class="inline-block px-3 py-1 mb-2 text-[10px] font-bold tracking-widest text-pink-400 border border-pink-500/30 rounded-full uppercase bg-black/40 backdrop-blur-md">Workspace</span>
-                                <span class="block text-white font-semibold text-lg leading-tight shadow-black drop-shadow-md">${item.alt}</span>
-                            </div>
-                        </div>
+                    <!-- Image -->
+                    <img src="${item.img}" alt="${item.alt}" draggable="false" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" loading="lazy" />
+                    
+                    <!-- Clean minimal hover text for "sort" grid layout -->
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 pointer-events-none z-20">
+                        <span class="block text-white font-medium text-lg leading-tight translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-black drop-shadow-md">${item.alt}</span>
                     </div>
-
-                    <!-- Decorative Corner Accents on Hover -->
-                    <div class="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-transparent group-hover:border-pink-500 rounded-tl-[2rem] transition-colors duration-700 opacity-0 group-hover:opacity-100 pointer-events-none -translate-x-1 -translate-y-1"></div>
-                    <div class="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-transparent group-hover:border-cyan-500 rounded-br-[2rem] transition-colors duration-700 opacity-0 group-hover:opacity-100 pointer-events-none translate-x-1 translate-y-1"></div>
                 </div>
             `).join('');
 
@@ -797,7 +846,6 @@
                 </tr>
             `).join('');
 
-            // --- STREAMING_CHUNK:Configuring Theme Logic & Guards ---
             // Theme Toggle Logic
             let isDarkMode = true;
             const htmlElement = document.documentElement;
