@@ -325,6 +325,27 @@
         <div class="absolute top-[40%] left-[40%] w-[400px] h-[400px] rounded-full bg-amber-500/10 blur-[150px] animate-blob" style="animation-delay: 9s;"></div>
     </div>
 
+    <!-- CV View/Download Modal -->
+    <div id="resume-modal" class="fixed inset-0 z-[200] hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
+        <div id="resume-backdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer"></div>
+        <div class="relative z-10 max-w-4xl w-full mx-4 flex flex-col items-center gap-4 transform scale-95 transition-transform duration-300" id="resume-content">
+            <div class="w-full flex justify-end">
+                <button id="close-resume" class="text-white hover:text-pink-500 transition-colors bg-black/50 hover:bg-black/80 p-2 rounded-full cursor-pointer">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <div class="w-full max-h-[75vh] overflow-y-auto rounded-xl border border-slate-700 shadow-2xl bg-slate-900 flex justify-center p-2 sm:p-6">
+                <!-- Using inline styles to override the global img protection specifically for the resume if they need to interact, but downloading is handled via button below -->
+                <img src="cv.png" alt="Navadeep Resume" class="w-full h-auto object-contain pointer-events-auto" style="max-height: 1000px;" onerror="this.src='https://via.placeholder.com/800x1131?text=Resume+Placeholder+(cv.png)'" />
+            </div>
+            
+            <a href="cv.png" download="Navadeep_Resume.png" class="mt-2 bg-gradient-to-r from-pink-500 to-violet-600 hover:from-pink-600 hover:to-violet-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-3 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(236,72,153,0.5)]">
+                Download Resume <i data-lucide="download" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </div>
+
     <div class="relative z-10 flex flex-col min-h-screen">
         <!-- TOP NAVBAR -->
         <nav class="max-w-7xl w-full mx-auto px-6 lg:px-8 py-8 flex justify-between items-center z-50">
@@ -553,8 +574,9 @@
                             With a strong commitment to open-source, I bring extensive experience across multiple ecosystems including Python, NextJS, React, Swift, Kotlin, Go, and more. Let's connect and create something amazing together!
                         </p>
                         <div class="pt-6">
-                            <button class="bg-slate-100 dark:bg-[#1a1d27] text-slate-900 dark:text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-slate-200 dark:hover:bg-[#252a38] transition-all duration-500 flex items-center gap-3 transform hover:-translate-y-2 hover:shadow-lg">
-                                Download Resume <i data-lucide="download" class="w-4 h-4"></i>
+                            <!-- Trigger for Resume Modal -->
+                            <button id="view-resume-btn" class="bg-slate-100 dark:bg-[#1a1d27] text-slate-900 dark:text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-slate-200 dark:hover:bg-[#252a38] transition-all duration-500 flex items-center gap-3 transform hover:-translate-y-2 hover:shadow-lg">
+                                View Resume <i data-lucide="eye" class="w-4 h-4"></i>
                             </button>
                         </div>
                     </div>
@@ -784,6 +806,36 @@
                     </td>
                 </tr>
             `).join('');
+
+            // --- Resume Modal Logic ---
+            const viewResumeBtn = document.getElementById('view-resume-btn');
+            const resumeModal = document.getElementById('resume-modal');
+            const closeResumeBtn = document.getElementById('close-resume');
+            const resumeBackdrop = document.getElementById('resume-backdrop');
+            const resumeContent = document.getElementById('resume-content');
+
+            function openResumeModal() {
+                resumeModal.classList.remove('hidden');
+                // Brief delay to allow display to apply before fading in
+                setTimeout(() => {
+                    resumeModal.classList.remove('opacity-0');
+                    resumeContent.classList.remove('scale-95');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeResumeModal() {
+                resumeModal.classList.add('opacity-0');
+                resumeContent.classList.add('scale-95');
+                setTimeout(() => {
+                    resumeModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
+
+            viewResumeBtn.addEventListener('click', openResumeModal);
+            closeResumeBtn.addEventListener('click', closeResumeModal);
+            resumeBackdrop.addEventListener('click', closeResumeModal);
 
             // Theme Toggle Logic
             let isDarkMode = true;
